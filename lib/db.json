@@ -128,7 +128,7 @@
         "Spectral Circlet",
         "Fuel Array"
     ],
-    "monsers": [
+    "monsters": [
         "Alloy Vulture",
         "Beetle",
         "Beetle Guard",
@@ -172,5 +172,6 @@
         "Mithrix",
         "Twisted Scavenger",
         "Malachite Urchin"
-    ]
+    ],
+    "Survivors": ["Acrid", "Artificer", "Captain", "Commando", "Engineer", "Huntress", "Loader", "Mercenary", "MUL-T", "REX"]
 }
