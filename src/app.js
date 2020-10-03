@@ -43,4 +43,4 @@ ${item.image}
         });
     }
 });
-client.login('NzYyMDU5ODM3Njg5MTY3OTUz.X3jphw._po1lAuTD5qgkEqXSgbYeWxBUp0');
+client.login(process.env.BOT_TOKEN);
