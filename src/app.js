@@ -1,5 +1,7 @@
 import '@babel/polyfill';
 import getItem from './risk-of-rain/getItem';
+import getMonster from './risk-of-rain/getMonster';
+import getSurvivor from './risk-of-rain/getSurvivor.js';
 import Discord from 'discord.js';
 
 const client = new Discord.Client();
@@ -22,23 +24,47 @@ client.on('message', (message) => {
     const command = args.shift();
     if (command === '!ritem') {
         const itemName = buildString(args);
-
         getItem(itemName).then((item) => {
             const embed = new Discord.MessageEmbed();
-            embed.setTitle(item.name);
+            // embed.setTitle(item.name);
             embed.setThumbnail(item.image);
             // embed.setImage(item.image);
-            embed.setAuthor('RiskBot-9000', client.user.avatar, 'https://riskofrain2.gamepedia.com/');
+            embed.setAuthor('Risk of Rain 2 Wiki', client.user.avatar, `https://riskofrain2.gamepedia.com/${item.name.replace(' ', '_')}`);
             embed.setDescription(item.caption);
             embed.addFields({
                 name: 'Stats:',
                 value: item.description,
             });
-            const string = `**${item.name}**
-${item.caption}
-${item.description}
-${item.image}
-            `;
+            message.channel.send(embed);
+        });
+    }
+
+    if (command === '!rmonster') {
+        const monsterName = buildString(args);
+        getMonster(monsterName).then((monster) => {
+            const embed = new Discord.MessageEmbed();
+            embed.setThumbnail(monster.image);
+            embed.setTitle(monster.name);
+            embed.setAuthor('Risk of Rain 2 Wiki', client.user.avatar, `https://riskofrain2.gamepedia.com/${monster.name.replace(' ', '_')}`);
+            embed.addFields({
+                name: 'Stats:',
+                value: monster.text,
+            });
+            message.channel.send(embed);
+        });
+    }
+
+    if (command === '!rsurvivor') {
+        const survivorName = buildString(args);
+        getSurvivor(survivorName).then((survivor) => {
+            const embed = new Discord.MessageEmbed();
+            embed.setThumbnail(survivor.image);
+            embed.setTitle(survivor.name);
+            embed.setAuthor('Risk of Rain 2 Wiki', client.user.avatar, `https://riskofrain2.gamepedia.com/${survivor.name.replace(' ', '_')}`);
+            embed.addFields({
+                name: 'Stats:',
+                value: survivor.text,
+            });
             message.channel.send(embed);
         });
     }
