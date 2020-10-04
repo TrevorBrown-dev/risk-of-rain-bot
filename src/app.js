@@ -1,7 +1,5 @@
 import '@babel/polyfill';
-import getItem from './risk-of-rain/getItem';
-import getMonster from './risk-of-rain/getMonster';
-import getSurvivor from './risk-of-rain/getSurvivor.js';
+import { getMonster, getItem, getSurvivor } from './risk-of-rain';
 import Discord from 'discord.js';
 
 const client = new Discord.Client();
