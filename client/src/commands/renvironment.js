@@ -1,10 +1,10 @@
-import getEnvironment from '../requests/getEnvironment';
-import buildString from '../helpers/buildString';
+import axios from 'axios';
+
 import { MessageEmbed } from 'discord.js';
 
-const renvironment = (message, args) => {
-    const environmentName = buildString(args);
-    getEnvironment(environmentName).then((environment) => {
+const renvironment = (message, environmentName) => {
+    axios.get(`http://localhost:5000/ennvironments/${environmentName}`).then((response) => {
+        const environment = response.data;
         const embed = new MessageEmbed();
         embed.setImage(environment.image);
         embed.setTitle(environment.name);

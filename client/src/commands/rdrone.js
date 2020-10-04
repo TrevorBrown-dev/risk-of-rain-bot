@@ -1,10 +1,9 @@
-import getDrone from '../requests/getDrone';
-import buildString from '../helpers/buildString';
+import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 
-const rdrone = (message, args) => {
-    const droneName = buildString(args);
-    getDrone(droneName).then((drone) => {
+const rdrone = (message, droneName) => {
+    axios.get(`http://localhost:5000/drones/${droneName}`).then((response) => {
+        const drone = response.data;
         const embed = new MessageEmbed();
         embed.setThumbnail(drone.image);
         embed.setTitle(drone.name);

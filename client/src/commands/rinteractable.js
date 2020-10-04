@@ -1,10 +1,10 @@
-import getInteractable from '../requests/getInteractable';
-import buildString from '../helpers/buildString';
+import axios from 'axios';
+
 import { MessageEmbed } from 'discord.js';
 
-const rinteractable = (message, args) => {
-    const interactableName = buildString(args);
-    getInteractable(interactableName).then((interactable) => {
+const rinteractable = (message, interactableName) => {
+    axios.get(`http://localhost:5000/interactables/${interactableName}`).then((response) => {
+        const interactable = response.data;
         const embed = new MessageEmbed();
         embed.setImage(interactable.image);
         embed.setTitle(interactable.name);

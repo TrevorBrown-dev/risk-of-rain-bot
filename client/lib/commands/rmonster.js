@@ -5,17 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _getMonster = _interopRequireDefault(require("../requests/getMonster"));
-
-var _buildString = _interopRequireDefault(require("../helpers/buildString"));
+var _axios = _interopRequireDefault(require("axios"));
 
 var _discord = require("discord.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var rmonster = function rmonster(message, args) {
-  var monsterName = (0, _buildString["default"])(args);
-  (0, _getMonster["default"])(monsterName).then(function (monster) {
+var rmonster = function rmonster(message, monsterName) {
+  _axios["default"].get("http://localhost:5000/monsters/".concat(monsterName)).then(function (response) {
+    var monster = response.data;
     var embed = new _discord.MessageEmbed();
     embed.setThumbnail(monster.image);
     embed.setTitle(monster.name);

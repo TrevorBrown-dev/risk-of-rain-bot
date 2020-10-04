@@ -1,10 +1,9 @@
-import getSurvivor from '../requests/getSurvivor';
-import buildString from '../helpers/buildString';
+import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 
-const rsurvivor = (message, args) => {
-    const survivorName = buildString(args);
-    getSurvivor(survivorName).then((survivor) => {
+const rsurvivor = (message, survivorName) => {
+    axios.get(`http://localhost:5000/survivors/${survivorName}`).then((response) => {
+        const survivor = response.data;
         const embed = new MessageEmbed();
         embed.setThumbnail(survivor.image);
         embed.setTitle(survivor.name);

@@ -5,17 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _getEnvironment = _interopRequireDefault(require("../requests/getEnvironment"));
-
-var _buildString = _interopRequireDefault(require("../helpers/buildString"));
+var _axios = _interopRequireDefault(require("axios"));
 
 var _discord = require("discord.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var renvironment = function renvironment(message, args) {
-  var environmentName = (0, _buildString["default"])(args);
-  (0, _getEnvironment["default"])(environmentName).then(function (environment) {
+var renvironment = function renvironment(message, environmentName) {
+  _axios["default"].get("http://localhost:5000/ennvironments/".concat(environmentName)).then(function (response) {
+    var environment = response.data;
     var embed = new _discord.MessageEmbed();
     embed.setImage(environment.image);
     embed.setTitle(environment.name);

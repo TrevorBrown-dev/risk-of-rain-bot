@@ -1,8 +1,6 @@
 import jsdom from 'jsdom';
 import axios from 'axios';
 
-import spellCheck from '../helpers/spellCheck.js';
-import db from '../db.json';
 const { JSDOM } = jsdom;
 
 const formatText = (text) => {
@@ -20,7 +18,6 @@ const formatText = (text) => {
 };
 
 const getDrone = async (droneName) => {
-    droneName = spellCheck(droneName, db.drones);
     const response = await axios.get(`https://riskofrain2.gamepedia.com/${droneName}`).catch((error) => {
         console.log(error);
     });

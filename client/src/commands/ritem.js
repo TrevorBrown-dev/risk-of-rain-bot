@@ -1,9 +1,8 @@
-import getItem from '../requests/getItem';
-import buildString from '../helpers/buildString';
+import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
-const ritem = (message, args) => {
-    const itemName = buildString(args);
-    getItem(itemName).then((item) => {
+const ritem = (message, itemName) => {
+    axios.get(`http://localhost:5000/items/${itemName}`).then((response) => {
+        const item = response.data;
         const embed = new MessageEmbed();
         embed.setTitle(item.name);
         embed.setThumbnail(item.image);

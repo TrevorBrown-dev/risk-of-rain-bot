@@ -1,8 +1,6 @@
 import jsdom from 'jsdom';
 import axios from 'axios';
 
-import spellCheck from '../helpers/spellCheck.js';
-import db from '../db.json';
 const { JSDOM } = jsdom;
 
 const formatText = (text) => {
@@ -18,11 +16,10 @@ const formatText = (text) => {
 };
 
 const getSurvivor = async (survivorName) => {
-    // survivorName = spellCheck(survivorName, db.survivors);
-    // const response = await axios.get(`https://riskofrain2.gamepedia.com/${survivorName}`).catch((error) => {
-    //     console.log(error);
-    // });
-    // const page = new JSDOM(response.data);
+    const response = await axios.get(`https://riskofrain2.gamepedia.com/${survivorName}`).catch((error) => {
+        console.log(error);
+    });
+    const page = new JSDOM(response.data);
     const name = page.window.document.querySelector('.infoboxname').textContent;
     let text = page.window.document.querySelector('.infoboxtable').textContent.trim();
     text = text.replace(name, '');

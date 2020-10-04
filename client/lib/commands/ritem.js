@@ -5,17 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _getItem = _interopRequireDefault(require("../requests/getItem"));
-
-var _buildString = _interopRequireDefault(require("../helpers/buildString"));
+var _axios = _interopRequireDefault(require("axios"));
 
 var _discord = require("discord.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var ritem = function ritem(message, args) {
-  var itemName = (0, _buildString["default"])(args);
-  (0, _getItem["default"])(itemName).then(function (item) {
+var ritem = function ritem(message, itemName) {
+  _axios["default"].get("http://localhost:5000/items/".concat(itemName)).then(function (response) {
+    var item = response.data;
     var embed = new _discord.MessageEmbed();
     embed.setTitle(item.name);
     embed.setThumbnail(item.image);

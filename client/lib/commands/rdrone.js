@@ -5,17 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _getDrone = _interopRequireDefault(require("../requests/getDrone"));
-
-var _buildString = _interopRequireDefault(require("../helpers/buildString"));
+var _axios = _interopRequireDefault(require("axios"));
 
 var _discord = require("discord.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var rdrone = function rdrone(message, args) {
-  var droneName = (0, _buildString["default"])(args);
-  (0, _getDrone["default"])(droneName).then(function (drone) {
+var rdrone = function rdrone(message, droneName) {
+  _axios["default"].get("http://localhost:5000/drones/".concat(droneName)).then(function (response) {
+    var drone = response.data;
     var embed = new _discord.MessageEmbed();
     embed.setThumbnail(drone.image);
     embed.setTitle(drone.name);
