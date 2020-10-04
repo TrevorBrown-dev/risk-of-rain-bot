@@ -7,7 +7,6 @@ const ritem = (message, args) => {
         const embed = new Discord.MessageEmbed();
         embed.setTitle(item.name);
         embed.setThumbnail(item.image);
-        // embed.setImage(item.image);
         embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${item.name.replace(/ +/g, '_')}`);
         embed.setDescription(item.caption);
         embed.addFields({
