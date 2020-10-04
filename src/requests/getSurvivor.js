@@ -7,7 +7,9 @@ const { JSDOM } = jsdom;
 
 const getSurvivor = async (survivorName) => {
     survivorName = spellCheck(survivorName, db.survivors);
-    const response = await axios.get(`https://riskofrain2.gamepedia.com/${survivorName}`);
+    const response = await axios.get(`https://riskofrain2.gamepedia.com/${survivorName}`).catch((error) => {
+        console.log(error);
+    });
     const page = new JSDOM(response.data);
     const name = page.window.document.querySelector('.infoboxname').textContent;
     let text = page.window.document.querySelector('.infoboxtable').textContent.trim();
