@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 import Discord from 'discord.js';
 
-import { ritem, rmonster, rsurvivor, renvironment, rinteractable} from './commands';
+import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone} from './commands';
 
 const client = new Discord.Client();
 
@@ -31,6 +31,10 @@ client.on('message', (message) => {
 
     if (command === '!rint' || command === '!rinteractable') {
         rinteractable(message, args);
+    }
+
+    if (command === '!rdrone') {
+        rdrone(message, args);
     }
 });
 client.login(process.env.BOT_TOKEN);

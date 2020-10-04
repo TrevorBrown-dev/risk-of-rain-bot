@@ -11,7 +11,7 @@ const rinteractable = (message, args) => {
         embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${interactable.name.replace(/ +/g, '_')}`);
         embed.addFields({
             name: 'Description:',
-            value: interactable.description + '\n'// + interactable.text,
+            value: interactable.description + '\n',
         });
         message.channel.send(embed);
     });
