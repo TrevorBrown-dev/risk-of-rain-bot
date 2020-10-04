@@ -12,7 +12,7 @@ var _discord = require("discord.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var renvironment = function renvironment(message, environmentName) {
-  _axios["default"].get("http://localhost:5000/ennvironments/".concat(environmentName)).then(function (response) {
+  _axios["default"].get("http://localhost:5000/environments/".concat(environmentName)).then(function (response) {
     var environment = response.data;
     var embed = new _discord.MessageEmbed();
     embed.setImage(environment.image);
