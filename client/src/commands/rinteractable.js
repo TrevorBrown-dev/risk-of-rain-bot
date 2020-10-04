@@ -1,0 +1,20 @@
+import getInteractable from '../requests/getInteractable';
+import buildString from '../helpers/buildString';
+import { MessageEmbed } from 'discord.js';
+
+const rinteractable = (message, args) => {
+    const interactableName = buildString(args);
+    getInteractable(interactableName).then((interactable) => {
+        const embed = new MessageEmbed();
+        embed.setImage(interactable.image);
+        embed.setTitle(interactable.name);
+        embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${interactable.name.replace(/ +/g, '_')}`);
+        embed.addFields({
+            name: 'Description:',
+            value: interactable.description + '\n',
+        });
+        message.channel.send(embed);
+    });
+};
+
+export default rinteractable;
