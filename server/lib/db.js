@@ -507,109 +507,161 @@ var environments = [{
 }];
 exports.environments = environments;
 var challenges = [{
-  name: '...To Be left Alone'
+  name: '...To Be Left Alone',
+  aliases: [survivors[0]]
 }, {
-  name: 'Engineering Perfection'
+  name: 'Engineering Perfection',
+  aliases: [survivors[4]]
 }, {
-  name: 'Guidance Offline'
+  name: 'Guidance Offline',
+  aliases: [survivors[6]]
 }, {
-  name: 'Pause.'
+  name: 'Pause.',
+  aliases: [survivors[1]]
 }, {
-  name: 'Power Plant'
+  name: 'Power Plant',
+  aliases: [survivors[9]]
 }, {
-  name: 'True Respite'
+  name: 'True Respite',
+  aliases: [survivors[7]]
 }, {
-  name: 'Verified'
+  name: 'Verified',
+  aliases: [survivors[8]]
 }, {
-  name: 'Warrior'
+  name: 'Warrior',
+  aliases: [survivors[5]]
 }, {
-  name: 'Washed Away'
+  name: 'Washed Away',
+  aliases: [survivors[2]]
 }, {
-  name: '"Is This Bugged?"'
+  name: '"Is This Bugged?"',
+  aliases: [items[4]]
 }, {
-  name: '...Maybe One More.'
+  name: '...Maybe One More.',
+  aliases: [items[14]]
 }, {
-  name: 'Advancement'
+  name: 'Advancement',
+  aliases: [items[19]]
 }, {
-  name: 'Automation Activation'
+  name: 'Automation Activation',
+  aliases: [items[48]]
 }, {
-  name: 'Blockade Breaker'
+  name: 'Blockade Breaker',
+  aliases: [items[91], items[90]]
 }, {
-  name: 'Cut Down'
+  name: 'Cut Down',
+  aliases: [items[43]]
 }, {
-  name: 'Death Do Us Part'
+  name: 'Death Do Us Part',
+  aliases: [items[39], items[40]]
 }, {
-  name: 'Deicide'
+  name: 'Deicide',
+  aliases: [items[65]]
 }, {
-  name: 'Deja Vu?'
+  name: 'Deja Vu?',
+  aliases: [items[59]]
 }, {
-  name: 'Elite Slayer'
+  name: 'Elite Slayer',
+  aliases: [items[11]]
 }, {
-  name: 'Experimenting'
+  name: 'Experimenting',
+  aliases: [items[34]]
 }, {
-  name: 'Flawless'
+  name: 'Flawless',
+  aliases: [items[16]]
 }, {
-  name: 'Glorious Battle'
+  name: 'Glorious Battle',
+  aliases: [items[37]]
 }, {
-  name: 'Going Fast Recommended'
+  name: 'Going Fast Recommended',
+  aliases: [items[42]]
 }, {
-  name: 'Her Concepts'
+  name: 'Her Concepts',
+  aliases: [items[56]]
 }, {
-  name: 'Keyed Up'
+  name: 'Keyed Up',
+  aliases: [items[18]]
 }, {
-  name: 'Learning Process'
+  name: 'Learning Process',
+  aliases: [items[1]]
 }, {
-  name: 'Macho'
+  name: 'Macho',
+  aliases: [items[57]]
 }, {
-  name: 'Naturopath'
+  name: 'Naturopath',
+  aliases: [items[66]]
 }, {
-  name: 'Never Back Down'
+  name: 'Never Back Down',
+  aliases: [items[93]]
 }, {
-  name: 'Newtist'
+  name: 'Newtist',
+  aliases: [items[61]]
 }, {
-  name: 'Prismatically Aligned'
+  name: 'Prismatically Aligned',
+  aliases: [items[334]]
 }, {
-  name: 'Rapidfire'
+  name: 'Rapidfire',
+  aliases: [items[30]]
 }, {
-  name: 'Slaughter'
+  name: 'Slaughter',
+  aliases: [items[35]]
 }, {
-  name: 'The Basics'
+  name: 'The Basics',
+  aliases: [items[6]]
 }, {
-  name: 'The Calm'
+  name: 'The Calm',
+  aliases: [items[96]]
 }, {
-  name: 'The Demons And The Crabs'
+  name: 'The Demons And The Crabs',
+  aliases: [items[89]]
 }, {
-  name: 'The Lone Survivor'
+  name: 'The Lone Survivor',
+  aliases: [items[62]]
 }, {
-  name: 'The Long Road'
+  name: 'The Long Road',
+  aliases: [items[58]]
 }, {
-  name: 'Warmonger'
+  name: 'Warmonger',
+  aliases: [items[44]]
 }, {
-  name: 'Ascendant'
+  name: 'Ascendant',
+  aliases: [items[108]]
 }, {
-  name: 'Blackout'
+  name: 'Blackout',
+  aliases: [items[112]]
 }, {
-  name: 'Bookworm'
+  name: 'Bookworm',
+  aliases: [items[111]]
 }, {
-  name: 'Cleanup Duty'
+  name: 'Cleanup Duty',
+  aliases: [items[117]]
 }, {
-  name: 'Cosmic Explorer'
+  name: 'Cosmic Explorer',
+  aliases: [items[102]]
 }, {
-  name: 'Funded!'
+  name: 'Funded!',
+  aliases: [items[109]]
 }, {
-  name: 'I Love Dying!'
+  name: 'I Love Dying!',
+  aliases: [items[120]]
 }, {
-  name: 'Mechanic'
+  name: 'Mechanic',
+  aliases: [items[105]]
 }, {
-  name: 'Moon Worshipper'
+  name: 'Moon Worshipper',
+  aliases: [items[97]]
 }, {
-  name: 'Multikill!'
+  name: 'Multikill!',
+  aliases: [items[98]]
 }, {
-  name: 'One with the Woods'
+  name: 'One with the Woods',
+  aliases: [items[110]]
 }, {
-  name: 'Warm For Life'
+  name: 'Warm For Life',
+  aliases: [items[113]]
 }, {
-  name: '[REDACTED]'
+  name: '[REDACTED]',
+  aliases: [items[106]]
 }, {
   name: 'Acrid: Bad Medicine'
 }, {
@@ -621,7 +673,7 @@ var challenges = [{
 }, {
   name: 'Artificer: Massacre'
 }, {
-  name: 'Artificer: Oribital Bombardment'
+  name: 'Artificer: Orbital Bombardment'
 }, {
   name: 'Captain: Wanderlust'
 }, {
@@ -649,9 +701,9 @@ var challenges = [{
 }, {
   name: 'Loader: Swing By'
 }, {
-  name: 'MUL_T: Gotcha!'
+  name: 'MUL-T: Gotcha!'
 }, {
-  name: 'MUL_T: Pest Control'
+  name: 'MUL-T: Pest Control'
 }, {
   name: 'Mercenary: Demon of the Skies'
 }, {

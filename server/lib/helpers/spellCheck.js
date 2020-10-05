@@ -15,10 +15,14 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//Spell check will go through an array given to it.
+//This is an array of objects with a key called name.
+//some keys (maybe all todo later) will have aliases.
 var spellCheck = function spellCheck(name, arr) {
-  var bestMatch = arr[0].name;
-  var bestSimilarity = (0, _checkSimilarity["default"])(bestMatch, name);
+  var bestMatch = arr[0];
+  var bestSimilarity = (0, _checkSimilarity["default"])(bestMatch.name, name);
   var item;
+  var newSimilarity;
 
   var _iterator = _createForOfIteratorHelper(arr),
       _step;
@@ -26,7 +30,31 @@ var spellCheck = function spellCheck(name, arr) {
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       item = _step.value;
-      var newSimilarity = (0, _checkSimilarity["default"])(item.name, name);
+
+      if (item.aliases) {
+        //This item has aliases to check.
+        var _iterator2 = _createForOfIteratorHelper(item.aliases),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var alias = _step2.value;
+            //iterate through aliases
+            if (alias) newSimilarity = (0, _checkSimilarity["default"])(alias.name, name);
+
+            if (newSimilarity > bestSimilarity) {
+              bestSimilarity = newSimilarity;
+              bestMatch = item;
+            }
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+      }
+
+      newSimilarity = (0, _checkSimilarity["default"])(item.name, name);
 
       if (newSimilarity > bestSimilarity) {
         bestSimilarity = newSimilarity;

@@ -1,7 +1,7 @@
 export default (str1, str2) => {
     return similarity(str1, str2);
 };
-
+//checks similarity between two strings and repleis with a decimal output
 const similarity = (s1, s2) => {
     let longer = s1;
     let shorter = s2;

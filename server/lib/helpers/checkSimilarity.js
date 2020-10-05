@@ -7,7 +7,8 @@ exports["default"] = void 0;
 
 var _default = function _default(str1, str2) {
   return similarity(str1, str2);
-};
+}; //checks similarity between two strings and repleis with a decimal output
+
 
 exports["default"] = _default;
 

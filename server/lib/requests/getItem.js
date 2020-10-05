@@ -26,7 +26,7 @@ var formatText = function formatText(text) {
 
 var getItem = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(itemName) {
-    var response, page, name, caption, description, image;
+    var response, page, document, name, caption, description, image;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -39,10 +39,11 @@ var getItem = /*#__PURE__*/function () {
           case 2:
             response = _context.sent;
             page = new JSDOM(response.data);
-            name = page.window.document.querySelector('.infoboxname').textContent;
-            caption = page.window.document.querySelector('.infoboxcaption').textContent;
-            description = formatText(page.window.document.querySelector('.infoboxdesc').textContent);
-            image = page.window.document.querySelector('.infoboxtable img').src;
+            document = page.window.document;
+            name = document.querySelector('.infoboxname').textContent;
+            caption = document.querySelector('.infoboxcaption').textContent;
+            description = formatText(document.querySelector('.infoboxdesc').textContent);
+            image = document.querySelector('.infoboxtable img').src;
             return _context.abrupt("return", {
               name: name,
               caption: caption,
@@ -50,7 +51,7 @@ var getItem = /*#__PURE__*/function () {
               image: image
             });
 
-          case 9:
+          case 10:
           case "end":
             return _context.stop();
         }

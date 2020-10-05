@@ -42,5 +42,9 @@ client.on('message', function (message) {
   if (command === '!rdrone') {
     (0, _commands.rdrone)(message, name);
   }
+
+  if (command === '!rchallenge' || command === '!rchal') {
+    (0, _commands.rchallenge)(message, name);
+  }
 });
 client.login(process.env.BOT_TOKEN);

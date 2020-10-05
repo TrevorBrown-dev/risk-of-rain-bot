@@ -1,4 +1,4 @@
-import { getDrone, getEnvironment, getInteractable, getItem, getMonster, getSurvivor } from './index';
+import { getDrone, getEnvironment, getInteractable, getItem, getMonster, getSurvivor, getChallenge } from './index';
 const fetchData = async (route, name) => {
     switch (route) {
         case 'items':
@@ -13,7 +13,8 @@ const fetchData = async (route, name) => {
             return await getDrone(name);
         case 'environments':
             return await getEnvironment(name);
-        // case 'challenges':
+        case 'challenges':
+            return await getChallenge(name);
         // case 'artifacts':
     }
 };

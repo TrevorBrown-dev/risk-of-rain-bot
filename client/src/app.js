@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 import Discord from 'discord.js';
 
-import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone } from './commands';
+import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone, rchallenge } from './commands';
 import buildString from './helpers/buildString';
 
 const client = new Discord.Client();
@@ -37,6 +37,10 @@ client.on('message', (message) => {
 
     if (command === '!rdrone') {
         rdrone(message, name);
+    }
+
+    if (command === '!rchallenge' || command === '!rchal') {
+        rchallenge(message, name);
     }
 });
 client.login(process.env.BOT_TOKEN);

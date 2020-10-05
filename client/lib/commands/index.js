@@ -39,6 +39,12 @@ Object.defineProperty(exports, "rdrone", {
     return _rdrone["default"];
   }
 });
+Object.defineProperty(exports, "rchallenge", {
+  enumerable: true,
+  get: function get() {
+    return _rchallenge["default"];
+  }
+});
 
 var _ritem = _interopRequireDefault(require("./ritem"));
 
@@ -51,5 +57,7 @@ var _rmonster = _interopRequireDefault(require("./rmonster"));
 var _rinteractable = _interopRequireDefault(require("./rinteractable"));
 
 var _rdrone = _interopRequireDefault(require("./rdrone"));
+
+var _rchallenge = _interopRequireDefault(require("./rchallenge"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

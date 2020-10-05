@@ -18,39 +18,44 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var JSDOM = _jsdom["default"].JSDOM;
 
 var formatText = function formatText(text) {
+  text = text.replace('Unlock', '**Unlock:**');
   text = text.trim().replace(/(\r\n|\n|\r){2,}/gm, '\n\n');
   text = text.replace(/\(/g, '*(');
   text = text.replace(/\)/g, ')*');
   return text;
 };
 
-var getInteractable = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(interactableName) {
-    var response, page, document, name, description, image;
+var getChallenge = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(challengeName) {
+    var response, page, document, name, text, description, image;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log(interactableName);
+            console.log(challengeName); //We assume the user did !rchallenge <term>
+
             _context.next = 3;
-            return _axios["default"].get("https://riskofrain2.gamepedia.com/".concat(interactableName))["catch"](function (error) {// console.log(error);
+            return _axios["default"].get("https://riskofrain2.gamepedia.com/".concat(challengeName))["catch"](function (error) {
+              console.log(error);
             });
 
           case 3:
             response = _context.sent;
             page = new JSDOM(response.data);
             document = page.window.document;
-            name = document.querySelector('.firstHeading').textContent;
+            name = document.querySelector('.infoboxname').textContent;
+            text = document.querySelector('.infoboxtable').textContent.trim();
+            text = text.replace(name, '');
+            text = formatText(text);
             description = formatText(document.querySelector('.mw-parser-output p').textContent);
-            image = '';
-            if (!interactableName.includes('Launch Pads')) image = document.querySelector('.thumbinner img').src;
+            image = document.querySelector('.infoboxtable img').src;
             return _context.abrupt("return", {
               name: name,
-              description: description,
-              image: image
+              image: image,
+              text: text
             });
 
-          case 11:
+          case 13:
           case "end":
             return _context.stop();
         }
@@ -58,10 +63,10 @@ var getInteractable = /*#__PURE__*/function () {
     }, _callee);
   }));
 
-  return function getInteractable(_x) {
+  return function getChallenge(_x) {
     return _ref.apply(this, arguments);
   };
 }();
 
-var _default = getInteractable;
+var _default = getChallenge;
 exports["default"] = _default;

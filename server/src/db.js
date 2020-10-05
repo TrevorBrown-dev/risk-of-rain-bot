@@ -256,81 +256,388 @@ export const environments = [
 ];
 
 export const challenges = [
-    { name: '...To Be left Alone' },
-    { name: 'Engineering Perfection' },
-    { name: 'Guidance Offline' },
-    { name: 'Pause.' },
-    { name: 'Power Plant' },
-    { name: 'True Respite' },
-    { name: 'Verified' },
-    { name: 'Warrior' },
-    { name: 'Washed Away' },
-    { name: '"Is This Bugged?"' },
-    { name: '...Maybe One More.' },
-    { name: 'Advancement' },
-    { name: 'Automation Activation' },
-    { name: 'Blockade Breaker' },
-    { name: 'Cut Down' },
-    { name: 'Death Do Us Part' },
-    { name: 'Deicide' },
-    { name: 'Deja Vu?' },
-    { name: 'Elite Slayer' },
-    { name: 'Experimenting' },
-    { name: 'Flawless' },
-    { name: 'Glorious Battle' },
-    { name: 'Going Fast Recommended' },
-    { name: 'Her Concepts' },
-    { name: 'Keyed Up' },
-    { name: 'Learning Process' },
-    { name: 'Macho' },
-    { name: 'Naturopath' },
-    { name: 'Never Back Down' },
-    { name: 'Newtist' },
-    { name: 'Prismatically Aligned' },
-    { name: 'Rapidfire' },
-    { name: 'Slaughter' },
-    { name: 'The Basics' },
-    { name: 'The Calm' },
-    { name: 'The Demons And The Crabs' },
-    { name: 'The Lone Survivor' },
-    { name: 'The Long Road' },
-    { name: 'Warmonger' },
-    { name: 'Ascendant' },
-    { name: 'Blackout' },
-    { name: 'Bookworm' },
-    { name: 'Cleanup Duty' },
-    { name: 'Cosmic Explorer' },
-    { name: 'Funded!' },
-    { name: 'I Love Dying!' },
-    { name: 'Mechanic' },
-    { name: 'Moon Worshipper' },
-    { name: 'Multikill!' },
-    { name: 'One with the Woods' },
-    { name: 'Warm For Life' },
-    { name: '[REDACTED]' },
-    { name: 'Acrid: Bad Medicine' },
-    { name: 'Acrid: Easy Prey' },
-    { name: 'Acrid: Pandemic' },
-    { name: 'Acrid: Chunked!' },
-    { name: 'Artificer: Massacre' },
-    { name: 'Artificer: Oribital Bombardment' },
-    { name: 'Captain: Wanderlust' },
-    { name: 'Captain: Worth Every Penny' },
-    { name: 'Commando: Godspeed' },
-    { name: 'Commando: Incorruptible' },
-    { name: 'Commando: Rolling Thunder' },
-    { name: 'Engineer: 100% Calculated' },
-    { name: 'Engineer: Better With Friends' },
-    { name: 'Engineer: Zero Sum' },
-    { name: 'Huntress: Finishing Touch' },
-    { name: 'Huntress: One Shot, One Kill' },
-    { name: 'Huntress: Piercing Wind' },
-    { name: 'Loader: Earthshatter' },
-    { name: 'Loader: Swing By' },
-    { name: 'MUL_T: Gotcha!' },
-    { name: 'MUL_T: Pest Control' },
-    { name: 'Mercenary: Demon of the Skies' },
-    { name: 'Mercenary: Ethereal' },
-    { name: 'REX: Bushwacked' },
-    { name: 'REX: Dunked' },
+    {
+        name: '...To Be Left Alone',
+        aliases: [survivors[0]],
+    },
+    {
+        name: 'Engineering Perfection',
+        aliases: [survivors[4]],
+    },
+    {
+        name: 'Guidance Offline',
+        aliases: [survivors[6]],
+    },
+    {
+        name: 'Pause.',
+        aliases: [survivors[1]],
+    },
+    {
+        name: 'Power Plant',
+        aliases: [survivors[9]],
+    },
+    {
+        name: 'True Respite',
+        aliases: [survivors[7]],
+    },
+    {
+        name: 'Verified',
+        aliases: [survivors[8]],
+    },
+    {
+        name: 'Warrior',
+        aliases: [survivors[5]],
+    },
+    {
+        name: 'Washed Away',
+        aliases: [survivors[2]],
+    },
+    {
+        name: '"Is This Bugged?"',
+        aliases: [items[4]],
+    },
+    {
+        name: '...Maybe One More.',
+        aliases: [items[14]],
+    },
+    {
+        name: 'Advancement',
+        aliases: [items[19]],
+    },
+    {
+        name: 'Automation Activation',
+        aliases: [items[48]],
+    },
+    {
+        name: 'Blockade Breaker',
+        aliases: [items[91], items[90]],
+    },
+    {
+        name: 'Cut Down',
+        aliases: [items[43]],
+    },
+    {
+        name: 'Death Do Us Part',
+        aliases: [items[39], items[40]],
+    },
+    {
+        name: 'Deicide',
+        aliases: [items[65]],
+    },
+    {
+        name: 'Deja Vu?',
+        aliases: [items[59]],
+    },
+    {
+        name: 'Elite Slayer',
+        aliases: [items[11]],
+    },
+    {
+        name: 'Experimenting',
+        aliases: [items[34]],
+    },
+    {
+        name: 'Flawless',
+        aliases: [items[16]],
+    },
+    {
+        name: 'Glorious Battle',
+        aliases: [items[37]],
+    },
+    {
+        name: 'Going Fast Recommended',
+        aliases: [items[42]],
+    },
+    {
+        name: 'Her Concepts',
+        aliases: [items[56]],
+    },
+    {
+        name: 'Keyed Up',
+        aliases: [items[18]],
+    },
+    {
+        name: 'Learning Process',
+        aliases: [items[1]],
+    },
+    {
+        name: 'Macho',
+        aliases: [items[57]],
+    },
+    {
+        name: 'Naturopath',
+        aliases: [items[66]],
+    },
+    {
+        name: 'Never Back Down',
+        aliases: [items[93]],
+    },
+    {
+        name: 'Newtist',
+        aliases: [items[61]],
+    },
+    {
+        name: 'Prismatically Aligned',
+        aliases: [items[334]],
+    },
+    {
+        name: 'Rapidfire',
+        aliases: [items[30]],
+    },
+    {
+        name: 'Slaughter',
+        aliases: [items[35]],
+    },
+    {
+        name: 'The Basics',
+        aliases: [items[6]],
+    },
+    {
+        name: 'The Calm',
+        aliases: [items[96]],
+    },
+    {
+        name: 'The Demons And The Crabs',
+        aliases: [items[89]],
+    },
+    {
+        name: 'The Lone Survivor',
+        aliases: [items[62]],
+    },
+    {
+        name: 'The Long Road',
+        aliases: [items[58]],
+    },
+    {
+        name: 'Warmonger',
+        aliases: [items[44]],
+    },
+    {
+        name: 'Ascendant',
+        aliases: [items[108]],
+    },
+    {
+        name: 'Blackout',
+        aliases: [items[112]],
+    },
+    {
+        name: 'Bookworm',
+        aliases: [items[111]],
+    },
+    {
+        name: 'Cleanup Duty',
+        aliases: [items[117]],
+    },
+    {
+        name: 'Cosmic Explorer',
+        aliases: [items[102]],
+    },
+    {
+        name: 'Funded!',
+        aliases: [items[109]],
+    },
+    {
+        name: 'I Love Dying!',
+        aliases: [items[120]],
+    },
+    {
+        name: 'Mechanic',
+        aliases: [items[105]],
+    },
+    {
+        name: 'Moon Worshipper',
+        aliases: [items[97]],
+    },
+    {
+        name: 'Multikill!',
+        aliases: [items[98]],
+    },
+    {
+        name: 'One with the Woods',
+        aliases: [items[110]],
+    },
+    {
+        name: 'Warm For Life',
+        aliases: [items[113]],
+    },
+    {
+        name: '[REDACTED]',
+        aliases: [items[106]],
+    },
+    { 
+        name: 'Acrid: Bad Medicine', 
+        aliases: [skills[4]],
+    { 
+        name: 'Acrid: Easy Prey', 
+        aliases: [skills[1]],
+    },
+    { 
+        name: 'Acrid: Pandemic', 
+        aliases: [skills[6]],
+    },
+    { 
+        name: 'Artificer: Chunked!', 
+        aliases: [skills[12]],
+    },
+    { 
+        name: 'Artificer: Massacre', 
+        aliases: [skills[10]]
+    },
+    { 
+        name: 'Artificer: Orbital Bombardment', 
+        aliases: [skills[15]]
+    },
+    { 
+        name: 'Captain: Wanderlust', 
+        aliases: [skills[23]]
+    },
+    { 
+        name: 'Captain: Worth Every Penny', 
+        aliases: [skills[24]]
+    },
+    { 
+        name: 'Commando: Godspeed', 
+        aliases: [skills[29]]
+    },
+    { 
+        name: 'Commando: Incorruptible', 
+        aliases: [skills[31]]
+    },
+    { 
+        name: 'Commando: Rolling Thunder', 
+        aliases: [skills[27]]
+    },
+    { 
+        name: 'Engineer: 100% Calculated', 
+        aliases: [skills[34]]
+    },
+    { 
+        name: 'Engineer: Better With Friends', 
+        aliases: [skills[38]]
+    },
+    { 
+        name: 'Engineer: Zero Sum', 
+        aliases: [skills[36]]
+    },
+    { 
+        name: 'Huntress: Finishing Touch', 
+        aliases: [skills[40]]
+    },
+    { 
+        name: 'Huntress: One Shot, One Kill', 
+        aliases: [skills[43]]
+    },
+    { 
+        name: 'Huntress: Piercing Wind', 
+        aliases: [skills[45]]
+    },
+    { 
+        name: 'Loader: Earthshatter', 
+        aliases: [skills[51]]
+    },
+    { 
+        name: 'Loader: Swing By', 
+        aliases: [skills[49]]
+    },
+    { 
+        name: 'MUL-T: Gotcha!', 
+        aliases: [skills[64]]
+    },
+    { 
+        name: 'MUL-T: Pest Control', 
+        aliases: [skills[63]]
+    },
+    { 
+        name: 'Mercenary: Demon of the Skies', 
+        aliases: [skills[56]]
+    },
+    { 
+        name: 'Mercenary: Ethereal', 
+        aliases: [skills[59]]
+    },
+    { 
+        name: 'REX: Bushwacked', 
+        aliases: [skills[71]]
+    },
+    { 
+        name: 'REX: Dunked', 
+        aliases: [skills[73]]
+    },
+];
+export const skills = [
+    { name: 'Poison' },
+    { name: 'Blight' },
+    { name: 'Vicious Wounds' },
+    { name: 'Neurotoxin' },
+    { name: 'Ravenous Bite' },
+    { name: 'Caustic Leap' },
+    { name: 'Frenzied Leap' },
+    { name: 'Epidemic' },
+    { name: 'ENV Suit' },
+    { name: 'Flame Bolt' },
+    { name: 'Plasma Bolt' },
+    { name: 'Charged Nano-Bomb' },
+    { name: 'Cast Nano-Spear' },
+    { name: 'Snapfreeze' },
+    { name: 'Flamethrower' },
+    { name: 'Ion Surge' },
+    { name: 'Defensive Microbots' },
+    { name: 'Vulcan Shotgun' },
+    { name: 'Power Tazer' },
+    { name: 'Orbital Probe' },
+    { name: 'Orbital Supply Beacon' },
+    { name: 'Beacon: Healing' },
+    { name: 'Beacon: Shocking' },
+    { name: 'Beacon: Resupply' },
+    { name: 'Beacon: Hacking' },
+    { name: 'Double Tap' },
+    { name: 'Phase Round' },
+    { name: 'Phase Blast' },
+    { name: 'Tactical Dive' },
+    { name: 'Tactical Slide' },
+    { name: 'Supressive Fire' },
+    { name: 'Frag Grenade' },
+    { name: 'Bouncing Grenades' },
+    { name: 'Pressure Mines' },
+    { name: 'Spider Mines' },
+    { name: 'Bubble Shield' },
+    { name: 'Thermal Harpoons' },
+    { name: 'TR12 Gauss Auto-Turret' },
+    { name: 'TR58 Carbonizer Turret' },
+    { name: 'Strafe' },
+    { name: 'Flurry' },
+    { name: 'Laser Glaive' },
+    { name: 'Blink' },
+    { name: 'Phase Blink' },
+    { name: 'Arrow Rain' },
+    { name: 'Ballista' },
+    { name: 'Scrap Barrier' },
+    { name: 'Knuckleboom' },
+    { name: 'Grapple Fist' },
+    { name: 'Spiked Fist' },
+    { name: 'Charged Gauntlet' },
+    { name: 'Thunder Gauntlet' },
+    { name: 'M551 Pylon' },
+    { name: 'Cybernetic Enhancements' },
+    { name: 'Laser Sword' },
+    { name: 'Whirlwind' },
+    { name: 'Rising Thunder' },
+    { name: 'Blinding Assualt' },
+    { name: 'Eviscerate' },
+    { name: 'Slicing Winds' },
+    { name: 'Multifunctional' },
+    { name: 'Auto-Nailgun' },
+    { name: 'Rebar Puncher' },
+    { name: 'Scrap Launcher' },
+    { name: 'Power-Saw' },
+    { name: 'Blast Canister' },
+    { name: 'Transport Mode' },
+    { name: 'Retool'},
+    { name: 'Natural Toxins' },
+    { name: 'DIRECTIVE: Inject' },
+    { name: 'Seed Barrage' },
+    { name: 'DIRECTIVE: Drill' },
+    { name: 'DIRECTIVE: Disperse' },
+    { name: 'Bramble Volley' },
+    { name: 'Tangling Growth' }
 ];

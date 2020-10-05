@@ -17,11 +17,12 @@ var renvironment = function renvironment(message, environmentName) {
     var embed = new _discord.MessageEmbed();
     embed.setImage(environment.image);
     embed.setTitle(environment.name);
+    if (environment.caption) embed.setDescription("*".concat(environment.caption, "*"));
     embed.setAuthor('Risk of Rain 2 Wiki', '', "https://riskofrain2.gamepedia.com/".concat(environment.name.replace(/ +/g, '_')));
-    embed.addFields({
-      name: 'Description:',
-      value: environment.description + '\n' + environment.text
-    });
+    if (environment.description) embed.addField('Description', environment.description, false);
+    if (environment.stage.value) embed.addField(environment.stage.name, environment.stage.value, false);
+    if (environment.soundtrack.value) embed.addField(environment.soundtrack.name, environment.soundtrack.value, false);
+    if (environment.quote.value) embed.addField(environment.quote.name, environment.quote.value, false);
     message.channel.send(embed);
   });
 };

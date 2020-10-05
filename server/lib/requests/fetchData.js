@@ -18,7 +18,7 @@ var fetchData = /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.t0 = route;
-            _context.next = _context.t0 === 'items' ? 3 : _context.t0 === 'interactables' ? 6 : _context.t0 === 'monsters' ? 9 : _context.t0 === 'survivors' ? 12 : _context.t0 === 'drones' ? 15 : _context.t0 === 'environments' ? 18 : 21;
+            _context.next = _context.t0 === 'items' ? 3 : _context.t0 === 'interactables' ? 6 : _context.t0 === 'monsters' ? 9 : _context.t0 === 'survivors' ? 12 : _context.t0 === 'drones' ? 15 : _context.t0 === 'environments' ? 18 : _context.t0 === 'challenges' ? 21 : 24;
             break;
 
           case 3:
@@ -64,6 +64,13 @@ var fetchData = /*#__PURE__*/function () {
             return _context.abrupt("return", _context.sent);
 
           case 21:
+            _context.next = 23;
+            return (0, _index.getChallenge)(name);
+
+          case 23:
+            return _context.abrupt("return", _context.sent);
+
+          case 24:
           case "end":
             return _context.stop();
         }

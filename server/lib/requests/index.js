@@ -39,6 +39,12 @@ Object.defineProperty(exports, "getInteractable", {
     return _getInteractable["default"];
   }
 });
+Object.defineProperty(exports, "getChallenge", {
+  enumerable: true,
+  get: function get() {
+    return _getChallenge["default"];
+  }
+});
 
 var _getItem = _interopRequireDefault(require("./getItem"));
 
@@ -51,5 +57,7 @@ var _getEnvironment = _interopRequireDefault(require("./getEnvironment.js"));
 var _getDrone = _interopRequireDefault(require("./getDrone.js"));
 
 var _getInteractable = _interopRequireDefault(require("./getInteractable"));
+
+var _getChallenge = _interopRequireDefault(require("./getChallenge"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
