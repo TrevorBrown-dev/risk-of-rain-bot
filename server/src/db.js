@@ -464,104 +464,105 @@ export const challenges = [
         name: '[REDACTED]',
         aliases: [items[106]],
     },
-    { 
-        name: 'Acrid: Bad Medicine', 
+    {
+        name: 'Acrid: Bad Medicine',
         aliases: [skills[4]],
-    { 
-        name: 'Acrid: Easy Prey', 
+    },
+    {
+        name: 'Acrid: Easy Prey',
         aliases: [skills[1]],
     },
-    { 
-        name: 'Acrid: Pandemic', 
+    {
+        name: 'Acrid: Pandemic',
         aliases: [skills[6]],
     },
-    { 
-        name: 'Artificer: Chunked!', 
+    {
+        name: 'Artificer: Chunked!',
         aliases: [skills[12]],
     },
-    { 
-        name: 'Artificer: Massacre', 
-        aliases: [skills[10]]
+    {
+        name: 'Artificer: Massacre',
+        aliases: [skills[10]],
     },
-    { 
-        name: 'Artificer: Orbital Bombardment', 
-        aliases: [skills[15]]
+    {
+        name: 'Artificer: Orbital Bombardment',
+        aliases: [skills[15]],
     },
-    { 
-        name: 'Captain: Wanderlust', 
-        aliases: [skills[23]]
+    {
+        name: 'Captain: Wanderlust',
+        aliases: [skills[23]],
     },
-    { 
-        name: 'Captain: Worth Every Penny', 
-        aliases: [skills[24]]
+    {
+        name: 'Captain: Worth Every Penny',
+        aliases: [skills[24]],
     },
-    { 
-        name: 'Commando: Godspeed', 
-        aliases: [skills[29]]
+    {
+        name: 'Commando: Godspeed',
+        aliases: [skills[29]],
     },
-    { 
-        name: 'Commando: Incorruptible', 
-        aliases: [skills[31]]
+    {
+        name: 'Commando: Incorruptible',
+        aliases: [skills[31]],
     },
-    { 
-        name: 'Commando: Rolling Thunder', 
-        aliases: [skills[27]]
+    {
+        name: 'Commando: Rolling Thunder',
+        aliases: [skills[27]],
     },
-    { 
-        name: 'Engineer: 100% Calculated', 
-        aliases: [skills[34]]
+    {
+        name: 'Engineer: 100% Calculated',
+        aliases: [skills[34]],
     },
-    { 
-        name: 'Engineer: Better With Friends', 
-        aliases: [skills[38]]
+    {
+        name: 'Engineer: Better With Friends',
+        aliases: [skills[38]],
     },
-    { 
-        name: 'Engineer: Zero Sum', 
-        aliases: [skills[36]]
+    {
+        name: 'Engineer: Zero Sum',
+        aliases: [skills[36]],
     },
-    { 
-        name: 'Huntress: Finishing Touch', 
-        aliases: [skills[40]]
+    {
+        name: 'Huntress: Finishing Touch',
+        aliases: [skills[40]],
     },
-    { 
-        name: 'Huntress: One Shot, One Kill', 
-        aliases: [skills[43]]
+    {
+        name: 'Huntress: One Shot, One Kill',
+        aliases: [skills[43]],
     },
-    { 
-        name: 'Huntress: Piercing Wind', 
-        aliases: [skills[45]]
+    {
+        name: 'Huntress: Piercing Wind',
+        aliases: [skills[45]],
     },
-    { 
-        name: 'Loader: Earthshatter', 
-        aliases: [skills[51]]
+    {
+        name: 'Loader: Earthshatter',
+        aliases: [skills[51]],
     },
-    { 
-        name: 'Loader: Swing By', 
-        aliases: [skills[49]]
+    {
+        name: 'Loader: Swing By',
+        aliases: [skills[49]],
     },
-    { 
-        name: 'MUL-T: Gotcha!', 
-        aliases: [skills[64]]
+    {
+        name: 'MUL-T: Gotcha!',
+        aliases: [skills[64]],
     },
-    { 
-        name: 'MUL-T: Pest Control', 
-        aliases: [skills[63]]
+    {
+        name: 'MUL-T: Pest Control',
+        aliases: [skills[63]],
     },
-    { 
-        name: 'Mercenary: Demon of the Skies', 
-        aliases: [skills[56]]
+    {
+        name: 'Mercenary: Demon of the Skies',
+        aliases: [skills[56]],
     },
-    { 
-        name: 'Mercenary: Ethereal', 
-        aliases: [skills[59]]
+    {
+        name: 'Mercenary: Ethereal',
+        aliases: [skills[59]],
     },
-    { 
-        name: 'REX: Bushwacked', 
-        aliases: [skills[71]]
+    {
+        name: 'REX: Bushwacked',
+        aliases: [skills[71]],
     },
-    { 
-        name: 'REX: Dunked', 
-        aliases: [skills[73]]
+    {
+        name: 'REX: Dunked',
+        aliases: [skills[73]],
     },
 ];
 export const skills = [
@@ -632,12 +633,12 @@ export const skills = [
     { name: 'Power-Saw' },
     { name: 'Blast Canister' },
     { name: 'Transport Mode' },
-    { name: 'Retool'},
+    { name: 'Retool' },
     { name: 'Natural Toxins' },
     { name: 'DIRECTIVE: Inject' },
     { name: 'Seed Barrage' },
     { name: 'DIRECTIVE: Drill' },
     { name: 'DIRECTIVE: Disperse' },
     { name: 'Bramble Volley' },
-    { name: 'Tangling Growth' }
+    { name: 'Tangling Growth' },
 ];
