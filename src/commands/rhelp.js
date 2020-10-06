@@ -17,7 +17,7 @@ const rhelp = (message) => {
     `);
     embed.addFields({
         name: 'Legend:',
-        value: `= <> = user inputed
+        value: `<> = user inputed
 All commands autocorrect to the closest in their respective field.
 Leaving it blank autogenerates a random part of the database.
     `,})
