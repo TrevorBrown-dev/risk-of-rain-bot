@@ -7,4 +7,4 @@ import rdrone from './rdrone';
 import rchallenge from './rchallenge';
 import rhelp from './rhelp';
 
-export { ritem, renvironment, rsurvivor, rmonster, rinteractable, rdrone, rchallenge };
+export { ritem, renvironment, rsurvivor, rmonster, rinteractable, rdrone, rchallenge, rhelp };

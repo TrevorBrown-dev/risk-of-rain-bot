@@ -44,7 +44,7 @@ client.on('message', (message) => {
     }
 
     if (command === '!rhelp') {
-        rhelp();
+        rhelp(message);
     }
 });
 client.login(process.env.BOT_TOKEN);
