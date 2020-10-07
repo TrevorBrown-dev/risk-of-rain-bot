@@ -10,7 +10,7 @@ const rskill = (message, skillsName) => {
         });
 
         embed = new MessageEmbed();
-        embed.setColor('E0784E');
+        embed.setColor('3B953A');
         embed.setTitle(result.heading);
         embed.setThumbnail(result.image);
         for (let skillRow of result.skillRows) {

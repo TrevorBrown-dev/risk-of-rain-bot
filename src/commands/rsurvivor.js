@@ -5,7 +5,7 @@ const rsurvivor = (message, survivorName) => {
     axios.get(`http://localhost:5000/survivors/${survivorName}`).then((response) => {
         const survivor = response.data;
         const embed = new MessageEmbed();
-        embed.setColor('7220F1');
+        embed.setColor('363995');
         embed.setThumbnail(survivor.image);
         embed.setTitle(survivor.name);
         embed.setDescription(survivor.description);

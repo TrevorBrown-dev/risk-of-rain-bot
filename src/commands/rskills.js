@@ -12,7 +12,7 @@ const rskills = (message, skillsName) => {
         let embed;
         for (let skill of skills.skills) {
             embed = new MessageEmbed();
-            embed.setColor('E0784E');
+            embed.setColor('3B953A');
             embed.setTitle(skill.heading);
             embed.setThumbnail(skill.image);
             for (let skillRow of skill.skillRows) {

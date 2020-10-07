@@ -3,7 +3,7 @@ import { MessageEmbed } from 'discord.js';
 const rhelp = (message) => {
     const embed = new MessageEmbed();
     embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/`);
-    embed.setColor('12EED6');
+    embed.setColor('539791');
     embed.setDescription(`
 **!rhelp** => List all commands\n
 **!rchallenge**  <challenge> => Lists the challenge, way to achieve, and what it unlocks.\n
