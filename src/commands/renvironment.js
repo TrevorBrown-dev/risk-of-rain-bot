@@ -3,8 +3,7 @@ import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 
 const renvironment = (message, environmentName) => {
-    axios.get(`http://localhost:5000/environments/${environmentName}`).then((response) => {
-        const environment = response.data;
+    axios.get(`http://localhost:5000/environments/${environmentName}`).then(({ data: environment }) => {
         const embed = new MessageEmbed();
         embed.setColor('D1C768');
         embed.setImage(environment.image);

@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 const ritem = (message, itemName) => {
-    axios.get(`http://localhost:5000/items/${itemName}`).then((response) => {
-        const item = response.data;
+    axios.get(`http://localhost:5000/items/${itemName}`).then(({ data: item }) => {
         const embed = new MessageEmbed();
         embed.setColor('E0784E');
         embed.setTitle(item.name);

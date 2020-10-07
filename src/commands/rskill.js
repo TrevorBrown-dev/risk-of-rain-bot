@@ -1,18 +1,16 @@
 import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 const rskill = (message, skillsName) => {
-    axios.get(`http://localhost:5000/skills/${skillsName}?singleSkill=true`).then((response) => {
-        const skillResponse = response.data;
-        let embed;
-
+    axios.get(`http://localhost:5000/skills/${skillsName}?singleSkill=true`).then(({ data: skillResponse }) => {
         let result = skillResponse.skills.find((skill) => {
             return skill.heading.includes(skillResponse.reroute);
         });
 
-        embed = new MessageEmbed();
+        let embed = new MessageEmbed();
         embed.setColor('3B953A');
         embed.setTitle(result.heading);
         embed.setThumbnail(result.image);
+
         for (let skillRow of result.skillRows) {
             embed.addField(skillRow.name, skillRow.value, false);
         }

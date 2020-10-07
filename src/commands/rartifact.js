@@ -1,8 +1,7 @@
 import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 const rartifact = (message, artifactName) => {
-    axios.get(`http://localhost:5000/artifacts/${artifactName}`).then((response) => {
-        const artifact = response.data;
+    axios.get(`http://localhost:5000/artifacts/${artifactName}`).then(({ data: artifact }) => {
         const embed = new MessageEmbed();
         embed.setColor('815fb2');
         embed.setTitle(artifact.title);

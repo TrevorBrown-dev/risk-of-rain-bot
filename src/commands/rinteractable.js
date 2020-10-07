@@ -3,8 +3,7 @@ import axios from 'axios';
 import { MessageEmbed } from 'discord.js';
 
 const rinteractable = (message, interactableName) => {
-    axios.get(`http://localhost:5000/interactables/${interactableName}`).then((response) => {
-        const interactable = response.data;
+    axios.get(`http://localhost:5000/interactables/${interactableName}`).then(({ data: interactable }) => {
         const embed = new MessageEmbed();
         embed.setColor('A0E04E');
         embed.setThumbnail(interactable.image);
