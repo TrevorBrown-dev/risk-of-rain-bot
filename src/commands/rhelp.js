@@ -14,6 +14,8 @@ const rhelp = (message) => {
 **!rmonster**  <monster> => Gives description and stats\n
 **!rsurvivor**  <survivor> => Gives Caption and stats\n
 **!rskills**  <survivor> => Too return all skills of that survivor.\n
+**!rskill**  <skills> => Shows an individual skill.\n
+**!artifact**  <artifact> => Gives the description and password.\n
     `);
     embed.addFields({
         name: 'Legend:',

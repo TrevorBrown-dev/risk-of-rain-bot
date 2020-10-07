@@ -3,7 +3,6 @@ import { MessageEmbed } from 'discord.js';
 const rskill = (message, skillsName) => {
     axios.get(`http://localhost:5000/skills/${skillsName}?singleSkill=true`).then((response) => {
         const skillResponse = response.data;
-        console.log(response.data);
         let embed;
 
         let result = skillResponse.skills.find((skill) => {
