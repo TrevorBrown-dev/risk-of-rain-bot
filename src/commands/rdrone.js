@@ -5,6 +5,7 @@ const rdrone = (message, droneName) => {
     axios.get(`http://localhost:5000/drones/${droneName}`).then((response) => {
         const drone = response.data;
         const embed = new MessageEmbed();
+        embed.setColor('EF2877');
         embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${drone.name.replace(/ +/g, '_')}`);
         embed.setTitle(drone.name);
         embed.setThumbnail(drone.image);

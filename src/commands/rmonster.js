@@ -6,6 +6,7 @@ const rmonster = (message, monsterName) => {
         const monster = response.data;
         const embed = new MessageEmbed();
         if (monster.caption) embed.setDescription(`*${monster.caption}*`);
+        embed.setColor('204DF1');
         embed.setThumbnail(monster.image);
         embed.setTitle(monster.name);
         embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${monster.name.replace(/ +/g, '_')}`);

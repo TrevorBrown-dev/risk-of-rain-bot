@@ -13,14 +13,15 @@ const rhelp = (message) => {
 **!ritem**  <item> => Gives Description and Stats\n
 **!rmonster**  <monster> => Gives description and stats\n
 **!rsurvivor**  <survivor> => Gives Caption and stats\n
-**!rskills**  ( <survivor> => too return all skills or)  <skill> => Gives description and stats\n
+**!rskills**  <survivor> => Too return all skills of that survivor.\n
     `);
     embed.addFields({
         name: 'Legend:',
         value: `<> = user inputed
 All commands autocorrect to the closest in their respective field.
-Leaving it blank autogenerates a random part of the database.
-    `,})
+Leaving it blank autogenerates a random item of the database.
+    `,
+    });
     message.channel.send(embed);
 };
 

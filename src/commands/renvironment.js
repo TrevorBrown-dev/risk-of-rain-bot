@@ -6,6 +6,7 @@ const renvironment = (message, environmentName) => {
     axios.get(`http://localhost:5000/environments/${environmentName}`).then((response) => {
         const environment = response.data;
         const embed = new MessageEmbed();
+        embed.setColor('F0DC1E');
         embed.setImage(environment.image);
         embed.setTitle(environment.name);
         if (environment.caption) embed.setDescription(`*${environment.caption}*`);

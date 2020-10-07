@@ -5,6 +5,8 @@ import rmonster from './rmonster';
 import rinteractable from './rinteractable';
 import rdrone from './rdrone';
 import rchallenge from './rchallenge';
+import rskills from './rskills';
+import rskill from './rskill';
 import rhelp from './rhelp';
 
-export { ritem, renvironment, rsurvivor, rmonster, rinteractable, rdrone, rchallenge, rhelp };
+export { ritem, renvironment, rsurvivor, rmonster, rinteractable, rdrone, rchallenge, rhelp, rskills, rskill };

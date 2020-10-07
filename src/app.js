@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 import Discord from 'discord.js';
 
-import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone, rchallenge, rhelp } from './commands';
+import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone, rchallenge, rhelp, rskill, rskills } from './commands';
 import buildString from './helpers/buildString';
 
 const client = new Discord.Client();
@@ -41,6 +41,14 @@ client.on('message', (message) => {
 
     if (command === '!rchallenge' || command === '!rchal') {
         rchallenge(message, name);
+    }
+
+    if (command === '!rskill') {
+        rskill(message, name);
+    }
+
+    if (command === '!rskills') {
+        rskills(message, name);
     }
 
     if (command === '!rhelp') {

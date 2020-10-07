@@ -4,6 +4,7 @@
     "description": "A bot that queries the risk of rain wiki for info",
     "main": "index.js",
     "scripts": {
+        "clean": "rm -rf lib && npm run build",
         "start": "node ./lib/app.js",
         "dev": "concurrently \"npm run babel\" \"nodemon ./lib/app.js\"",
         "build": "babel src -d lib",
