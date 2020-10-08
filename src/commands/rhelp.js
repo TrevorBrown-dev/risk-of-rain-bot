@@ -6,8 +6,9 @@ const rhelp = (message) => {
     embed.setColor('539791');
     embed.setDescription(`
 **!rhelp** => List all commands\n
+**!rshare** => Get the bot invite link\n
 **!rchallenge**  <challenge> => Lists the challenge, way to achieve, and what it unlocks.\n
-**!rdrone**  <drone> => List the drone and stats.\n
+**!rdrone**  <drone> => List the drone and all stats.\n
 **!renvironment** (or **!renv**)  <enviroment> => Gives Description and image of the environment.\n
 **!rinteractable** (or **!rint**)  <interactable> => Gives Description and image\n
 **!ritem**  <item> => Gives Description and Stats\n
@@ -21,8 +22,8 @@ const rhelp = (message) => {
     embed.addFields({
         name: 'Legend:',
         value: `<> = user inputed
-All commands autocorrect to the closest in their respective field.
-Leaving it blank autogenerates a random item of the database.
+All commands autocorrect to the closest match on the wiki.
+Leaving it blank autogenerates a random result in that category.
     `,
     });
     message.channel.send(embed);

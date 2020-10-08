@@ -8,6 +8,9 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Ready to Risk of Rain');
+    client.user.setActivity("!rhelp",{
+        type: "WATCHING"
+    });
 });
 
 client.on('message', (message) => {
@@ -59,6 +62,10 @@ client.on('message', (message) => {
 
     if (command === '!rhelp') {
         rhelp(message);
+    }
+
+    if (command === '!rshare') {
+        message.channel.send(`Bot invite link: https://discord.com/api/oauth2/authorize?client_id=762075284849426453&permissions=2048&scope=bot`);
     }
 });
 client.login(process.env.BOT_TOKEN);
