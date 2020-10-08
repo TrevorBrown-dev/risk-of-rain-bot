@@ -1,7 +1,7 @@
 import '@babel/polyfill';
 import Discord from 'discord.js';
 
-import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone, rchallenge, rhelp, rskill, rskills, rartifact } from './commands';
+import { ritem, rmonster, rsurvivor, renvironment, rinteractable, rdrone, rchallenge, rhelp, rskill, rskills, rartifact, rlore} from './commands';
 import buildString from './helpers/buildString';
 
 const client = new Discord.Client();
@@ -52,6 +52,9 @@ client.on('message', (message) => {
     }
     if (command === '!rartifact') {
         rartifact(message, name);
+    }
+    if (command === '!rlore') {
+        rlore(message, name);
     }
 
     if (command === '!rhelp') {

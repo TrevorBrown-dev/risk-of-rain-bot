@@ -7,7 +7,7 @@ const rchallenge = (message, challengeName) => {
         embed.setColor('BCE8D2');
         embed.setThumbnail(challenge.image);
         embed.setTitle(challenge.name);
-        embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${challenge.name.replace(/ +/g, '_')}`);
+        embed.setAuthor(`Risk of Rain 2 Wiki - ${challenge.name}`, '', `https://riskofrain2.gamepedia.com/${challenge.name.replace(/ +/g, '_')}`);
         embed.addField('Challenge:', `${challenge.text}\n`, false);
 
         message.channel.send(embed);

@@ -9,7 +9,7 @@ const rsurvivor = (message, survivorName) => {
         embed.setThumbnail(survivor.image);
         embed.setTitle(survivor.name);
         embed.setDescription(survivor.description);
-        embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${survivor.name.replace(/ +/g, '_')}`);
+        embed.setAuthor(`Risk of Rain 2 Wiki - ${survivor.name}`, '', `https://riskofrain2.gamepedia.com/${survivor.name.replace(/ +/g, '_')}`);
         embed.addFields(...survivor.body);
         message.channel.send(embed);
     });

@@ -7,7 +7,7 @@ const rartifact = (message, artifactName) => {
         embed.setColor('815fb2');
         embed.setTitle(artifact.title);
         embed.setThumbnail(artifact.image);
-        embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/Artifacts`);
+        embed.setAuthor(`Risk of Rain 2 Wiki - ${artifact.title}`, '', `https://riskofrain2.gamepedia.com/Artifacts#${artifact.title.split(' ')[2]}`);
         embed.setDescription(artifact.description);
         embed.addFields({
             name: 'Code:',

@@ -7,7 +7,7 @@ const rinteractable = (message, interactableName) => {
         embed.setColor('A0E04E');
         embed.setThumbnail(interactable.image);
         embed.setTitle(interactable.name);
-        embed.setAuthor('Risk of Rain 2 Wiki', '', `https://riskofrain2.gamepedia.com/${interactable.name.replace(/ +/g, '_')}`);
+        embed.setAuthor(`Risk of Rain 2 Wiki - ${interactable.name}`, '', `https://riskofrain2.gamepedia.com/${interactable.name.replace(/ +/g, '_')}`);
         embed.addFields({
             name: 'Description:',
             value: interactable.description + '\n',
