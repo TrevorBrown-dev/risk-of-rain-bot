@@ -1,6 +1,6 @@
 import RoR from '../api/RoR';
-
 import { MessageEmbed } from 'discord.js';
+
 const rskills = (message, skillsName) => {
     RoR.get(`/skills/${skillsName}?singleSkill=false`).then(({ data: skills }) => {
         const embeds = [];

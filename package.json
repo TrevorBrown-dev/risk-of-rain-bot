@@ -6,7 +6,7 @@
     "scripts": {
         "clean": "rm -rf lib && npm run build",
         "start": "node ./lib/app.js",
-        "dev": "concurrently \"npm run babel\" \"nodemon ./lib/app.js\"",
+        "dev": "babel src -d lib && concurrently \"npm run babel\" \"nodemon ./lib/app.js\"",
         "build": "babel src -d lib",
         "babel": "babel src -d lib -w"
     },

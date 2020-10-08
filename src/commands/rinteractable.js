@@ -1,6 +1,4 @@
 import RoR from '../api/RoR';
-
-
 import { MessageEmbed } from 'discord.js';
 
 const rinteractable = (message, interactableName) => {

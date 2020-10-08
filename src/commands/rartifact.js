@@ -1,5 +1,6 @@
 import RoR from '../api/RoR';
 import { MessageEmbed } from 'discord.js';
+
 const rartifact = (message, artifactName) => {
     RoR.get(`/artifacts/${artifactName}`).then(({ data: artifact }) => {
         const embed = new MessageEmbed();
