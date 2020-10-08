@@ -1,7 +1,8 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 import { MessageEmbed } from 'discord.js';
 const rskills = (message, skillsName) => {
-    axios.get(`http://localhost:5000/skills/${skillsName}?singleSkill=false`).then(({ data: skills }) => {
+    RoR.get(`/skills/${skillsName}?singleSkill=false`).then(({ data: skills }) => {
         const embeds = [];
         console.log(skills);
         // embed.setColor('E0784E');

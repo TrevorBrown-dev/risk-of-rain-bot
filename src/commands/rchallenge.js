@@ -1,8 +1,8 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
 import { MessageEmbed } from 'discord.js';
 
 const rchallenge = (message, challengeName) => {
-    axios.get(`http://localhost:5000/challenges/${challengeName}`).then(({ data: challenge }) => {
+    RoR.get(`/challenges/${challengeName}`).then(({ data: challenge }) => {
         const embed = new MessageEmbed();
         embed.setColor('BCE8D2');
         embed.setThumbnail(challenge.image);

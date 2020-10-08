@@ -1,7 +1,8 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 import { MessageEmbed } from 'discord.js';
 const rskill = (message, skillsName) => {
-    axios.get(`http://localhost:5000/skills/${skillsName}?singleSkill=true`).then(({ data: skillResponse }) => {
+    RoR.get(`/skills/${skillsName}?singleSkill=true`).then(({ data: skillResponse }) => {
         let result = skillResponse.skills.find((skill) => {
             return skill.heading.includes(skillResponse.reroute);
         });

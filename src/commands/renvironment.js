@@ -1,9 +1,10 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 
 import { MessageEmbed } from 'discord.js';
 
 const renvironment = (message, environmentName) => {
-    axios.get(`http://localhost:5000/environments/${environmentName}`).then(({ data: environment }) => {
+    RoR.get(`/environments/${environmentName}`).then(({ data: environment }) => {
         const embed = new MessageEmbed();
         embed.setColor('D1C768');
         embed.setImage(environment.image);

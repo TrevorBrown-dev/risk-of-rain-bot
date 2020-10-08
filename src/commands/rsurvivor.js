@@ -1,8 +1,9 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 import { MessageEmbed } from 'discord.js';
 
 const rsurvivor = (message, survivorName) => {
-    axios.get(`http://localhost:5000/survivors/${survivorName}`).then((response) => {
+    RoR.get(`/survivors/${survivorName}`).then((response) => {
         const survivor = response.data;
         const embed = new MessageEmbed();
         embed.setColor('363995');

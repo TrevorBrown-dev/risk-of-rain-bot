@@ -1,7 +1,8 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 import { MessageEmbed } from 'discord.js';
 const ritem = (message, itemName) => {
-    axios.get(`http://localhost:5000/items/${itemName}`).then(({ data: item }) => {
+    RoR.get(`/items/${itemName}`).then(({ data: item }) => {
         const embed = new MessageEmbed();
         embed.setColor('E0784E');
         embed.setTitle(item.name);

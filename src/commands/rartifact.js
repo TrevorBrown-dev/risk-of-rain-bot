@@ -1,7 +1,7 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
 import { MessageEmbed } from 'discord.js';
 const rartifact = (message, artifactName) => {
-    axios.get(`http://localhost:5000/artifacts/${artifactName}`).then(({ data: artifact }) => {
+    RoR.get(`/artifacts/${artifactName}`).then(({ data: artifact }) => {
         const embed = new MessageEmbed();
         embed.setColor('815fb2');
         embed.setTitle(artifact.title);

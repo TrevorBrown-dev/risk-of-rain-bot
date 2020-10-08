@@ -1,8 +1,9 @@
-import axios from 'axios';
+import RoR from '../api/RoR';
+
 import { MessageEmbed } from 'discord.js';
 
 const rmonster = (message, monsterName) => {
-    axios.get(`http://localhost:5000/monsters/${monsterName}`).then(({ data: monster }) => {
+    RoR.get(`/monsters/${monsterName}`).then(({ data: monster }) => {
         const embed = new MessageEmbed();
         if (monster.caption) embed.setDescription(`*${monster.caption}*`);
         embed.setColor('C84F4F');
